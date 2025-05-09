@@ -1,11 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     const hintPage = document.getElementById('hintPage');
-    const Hint = ['support', 'cut', 'water']  
-    const hint = 1;
+    const hint = new URLSearchParams(window.location.search).get("hint");
+    const Hint = ['support', 'cut', 'cut2', 'harvest']  
     const youtubeUrl = {
       support:"https://www.youtube.com/watch?v=DoTRWplEdxg",    //지지대 설치
-      cut: "https://www.youtube.com/watch?v=HIcHx24OSDw",    //곁순 제거
-      water: ""  //물주기
+      cut: "https://www.youtube.com/watch?v=HIcHx24OSDw",       //곁순 제거
+      cut2: "https://www.youtube.com/watch?v=Jf4ZdFwNnwM",      //적심
+      harvest: "https://www.youtube.com/watch?v=jJTH5qbsces"    //수확
     }
     
   
@@ -57,12 +58,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
        -만약 실수로 원줄기를 잘라도 곁순을 원줄기처럼 키워주면 정상 재배가 가능합니다.
       `,
-      water: `
-      방울 토마토 물 주기 영상입니다.
+      cut2: `
+      방울 토마토 적심 영상입니다.
 
-      -
+       -얼마나 키울지에 따라 다르지만, 일반적으로 열매가 7단 이상 자라기 전에 원줄기를 잘라줘야 합니다.
+
+       -화방 위의 잎 2장을 남기고 잘라주는데 이를 적심이라고 합니다. 영양 공급을 효율적으로 하고 통풍을 좋게 하여 맛과 품질을 높여줍니다.
+      `,
+      harvest:`
+      방울 토마토 수확 영상입니다.
+
+       -수확은 일반적으로 7화방에 꽃이 피었을 때, 1화방부터 수확이 가능합니다.
+
+       -꼭지를 떼어내어 수확 할 시 열매가 금방 상할 수 있습니다.
+
+       -열매를 잡아서 꼭지 바로 위 마디 부분을 위로 꺾어주면 꼭지 마디가 톡 부러지면서 쉽게 딸 수 있습니다.
       `
-
     }
   
     const commentBox = document.createElement('div');
@@ -72,13 +83,15 @@ document.addEventListener('DOMContentLoaded', () => {
     commentBox.style.borderTop = "1px solid #ccc";
     commentBox.style.fontSize = "0.8rem";
     commentBox.style.fontWeight = "bold"; 
-    commentBox.style.backgroundColor = "#ffffff";  // 흰색 배경
+    commentBox.style.backgroundColor = "#ffffff";
     commentBox.style.borderRadius = "12px";        // 둥근 테두리
-    commentBox.style.boxShadow = "0 2px 8px rgba(0, 0, 0, 0.05)"; // 부드러운 그림자
-    commentBox.style.color = "#333";               // 글자 색상
+    commentBox.style.color = "#333";
     commentBox.style.whiteSpace = "pre-line";
+    commentBox.style.width = "85%";
+    commentBox.style.maxWidth = "300px";
     commentBox.style.maxHeight = "200px";
     commentBox.style.overflowY = "auto";
+    commentBox.style.margin = "0 auto";
 
     commentBox.innerText = commentText[Hint[hint]].trim();
     hintPage.appendChild(commentBox);

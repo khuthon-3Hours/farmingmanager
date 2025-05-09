@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const guide = document.getElementById('seedGuide');
-  const hintModel = new URLSearchParams(window.location.search).get("hintModel");
+  const hintModel = 0; //new URLSearchParams(window.location.search).get("hintModel");
   const Model = ['a', 'b', 'c', 'd']  
   const text = {
     a: "\n🌱 파종 이전 필수 진행 사항",     //파종
@@ -38,10 +38,11 @@ document.addEventListener('DOMContentLoaded', () => {
       `"<a href='page4.html?hint=1'>곁순 제거하기</a>"`
     ],
     c: [
-      `"<a href='page4.html?hint=1'>곁순 제거하기</a>"`
+      `"<a href='page4.html?hint=1'>곁순 제거하기</a>"`,
+      `"<a href='page4.html?hint=2'>적심</a>"`
     ],
     d: [
-      ``
+      `"<a href='page4.html?hint=3'>수확</a>"`
     ]
   };
 

@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const guide = document.getElementById('seedGuide');
-    const hintModel = new URLSearchParams(window.location.search).get("hintModel");
+    const hintModel = 0; //new URLSearchParams(window.location.search).get("hintModel");
     const Model = ['a', 'b', 'c', 'd']  
     const text = {
         a: "\n🌱 파종 이전 꿀팁",     //파종
