@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     const guide = document.getElementById('seedGuide');
-    const hintModel = 0; //new URLSearchParams(window.location.search).get("hintModel");
+    const hintModel = 2; //new URLSearchParams(window.location.search).get("hintModel");
     const Model = ['a', 'b', 'c', 'd']  
     const text = {
-        a: "\n🌱 파종 이전 꿀팁",     //파종
-        b: "\n🌱 모종 이전 꿀팁",     //모종
-        c: "\n🌱 수확 이전 꿀팁",     //관리
-        d: "\n🌱 수확 시 꿀팁"        //수확
+        a: "🌱 파종 이전 꿀팁",     //파종
+        b: "🌱 모종 이전 꿀팁",     //모종
+        c: "🌱 수확 이전 꿀팁",     //관리
+        d: "🌱 수확 시 꿀팁"        //수확
     }
 
     const title = document.createElement('h2');
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     contentBox.style.fontWeight = "bold";
     contentBox.style.width = "85%";
     contentBox.style.maxWidth = "300px";
-    contentBox.style.maxHeight = "150px";
+    contentBox.style.maxHeight = "200px";
     contentBox.style.margin = "0 auto";
     contentBox.style.overflowY = "auto";
   
