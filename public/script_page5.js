@@ -31,18 +31,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const items = {
     a: [
-      `"<a href='page4.html?hint=0'>지주대 설치</a>"`,
-      `"<a href='page4.html?hint=1'>곁순 제거하기</a>"`
+      `<a href='page4.html?hint=0'>지주대 설치</a>`,
+      `<a href='page4.html?hint=1'>곁순 제거하기</a>`
     ],
     b: [
-      `"<a href='page4.html?hint=1'>곁순 제거하기</a>"`
+      `<a href='page4.html?hint=1'>곁순 제거하기</a>`
     ],
     c: [
-      `"<a href='page4.html?hint=1'>곁순 제거하기</a>"`,
-      `"<a href='page4.html?hint=2'>적심</a>"`
+      `<a href='page4.html?hint=1'>곁순 제거하기</a>`,
+      `<a href='page4.html?hint=2'>적심</a>`
     ],
     d: [
-      `"<a href='page4.html?hint=3'>수확</a>"`
+      `<a href='page4.html?hint=3'>수확</a>`
     ]
   };
 
